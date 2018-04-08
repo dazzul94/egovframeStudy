@@ -6,5 +6,6 @@
 		<typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
 		<typeAlias alias="searchVO" type="egovframework.example.sample.domain.SampleDefaultVO"/>
 		<typeAlias alias="sampleVO" type="egovframework.example.sample.domain.SampleVO"/>
+		<typeAlias alias="member" type="egovframework.example.sample.domain.Member"/>
     </typeAliases>
 </configuration>
