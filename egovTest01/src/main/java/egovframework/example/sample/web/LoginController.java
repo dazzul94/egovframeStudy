@@ -55,7 +55,7 @@ public class LoginController {
         
         model.addAttribute("loginUser", login);
         
-        return "redirect:../member/list";
+        return "redirect:../member/list.do";
     }
     
     @RequestMapping("logout")
@@ -67,7 +67,7 @@ public class LoginController {
         // HttpSession 객체를 무효화시킨다.
         session.invalidate();
         
-        return "redirect:login";
+        return "redirect:login.do";
     }
 }
 
