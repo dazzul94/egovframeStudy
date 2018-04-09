@@ -150,6 +150,17 @@
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/ojdbc-14.jar</systemPath>
         </dependency>
         -->
+        <dependency> 
+        <groupId>commons-fileupload</groupId> 
+        <artifactId>commons-fileupload</artifactId> 
+        <version>1.2.1</version> 
+        </dependency> 
+        <dependency> 
+        <groupId>commons-io</groupId> 
+        <artifactId>commons-io</artifactId> 
+        <version>1.4</version> 
+        </dependency>
+
     </dependencies>
     
 <!--    3) 빌드 설정(필요한 플러그인이나 파일설치)
