@@ -59,7 +59,7 @@ padding: 50px;
 <div class='container'>
 <jsp:include page="../header.jsp"/>
 <p id="status"></p>
-<form action="update" method='post' enctype="multipart/form-data">
+<form action="update.do" method='post' enctype="multipart/form-data">
 <div id= "wrapper"> 
 <div class="left"> 
 <jsp:include page="../left.jsp"></jsp:include>
@@ -320,7 +320,7 @@ padding: 50px;
           <td height="3" align="center"><table width="107" border="0" cellpadding="1" cellspacing="1">
             <tr>
               <td width="49"><button type="submit" style="background-color: white; border:0px" onclick="okay()"><img src="${contextPath}/images/newTest/bt_remove.gif" width="49" height="18" style="cursor:pointer"></button></td>
-              <td width="51"><a href='list'><img src="${contextPath}/images/newTest/bt_cancel.gif" width="49" height="18"></a></td>
+              <td width="51"><a href='list.do'><img src="${contextPath}/images/newTest/bt_cancel.gif" width="49" height="18"></a></td>
             </tr>
           </table>            </td>
         </tr>

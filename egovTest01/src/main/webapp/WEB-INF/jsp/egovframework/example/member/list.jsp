@@ -69,7 +69,7 @@ padding: 50px;
   <tr> 
     <td><table width="640" border="0" cellspacing="0" cellpadding="0">
         <tr> 
-        <form class="form-inline" action="list">
+        <form class="form-inline" action="list.do">
           <td height="30" align="right"><select name="select" class="INPUT">
               <option selected value="kName">이름</option>
               <option value="gender">성별</option>
@@ -110,7 +110,7 @@ padding: 50px;
                 <c:forEach items="${list}" var="member" varStatus="status">
                     <tr> 
                       <td width="35" height="20" align="center"><input type="checkbox" id="check" value="${member.memberNo}" class="checkSelect"></td>
-                      <td width="85" align="center"><a href="${member.memberNo}"><span class="d-inline-block text-truncate" 
+                      <td width="85" align="center"><a href="${member.memberNo}.do"><span class="d-inline-block text-truncate" 
             style="max-width: 300px;">${member.kName}</span></a></td>
                       <td width="153" align="center">${member.myNumber1}-${member.myNumber2}</td>
                       <td width="91" align="center">${member.gender}</td>
@@ -128,17 +128,17 @@ padding: 50px;
                         <c:set var="nextPageDisabled" value="${(pageNo < lastPageNo) ? '':'disabled'}"/>
                         <c:set var="nextPageTabIndex" value="${(pageNo < lastPageNo) ? 0 : -1}"/>
 						  <ul class="pagination justify-content-center">
-                      <li class="page-item"><a href="list?pn=1&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/prev.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+                      <li class="page-item"><a href="list.do?pn=1&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/prev.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						    <li class="page-item ${prevPageDisabled}"><a id="prevBtn"
-						        href="list?pn=${pageNo - 1}&select=${select}&words=${words}"
+						        href="list.do?pn=${pageNo - 1}&select=${select}&words=${words}"
 						        tabindex="${prevPageTabIndex}"><img src="${contextPath}/images/newTest/pre.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						        
 						    <li><a href="#">${pageNo}</a>&nbsp;</li>
 						    
 						    <li class="page-item ${nextPageDisabled}"><a id="nextBtn"
-						        href="list?pn=${pageNo + 1}&select=${select}&words=${words}"
+						        href="list.do?pn=${pageNo + 1}&select=${select}&words=${words}"
 						        tabindex="${nextPageTabIndex}"><img src="${contextPath}/images/newTest/next.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
-                      <li class="page-item"><a href="list?pn=${lastPageNo}&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/next_.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+                      <li class="page-item"><a href="list.do?pn=${lastPageNo}&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/next_.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						  </ul>
                         </td>
                     </tr>
@@ -217,7 +217,7 @@ window.location = "delete?no=" + checkNo; */
 	        send_cnt++;
 	    }
 	}
-	window.location = "deleteAll?no=" + send_array;
+	window.location = "deleteAll.do?no=" + send_array;
 	/* $("#array").val(send_array); */
 }
 
