@@ -40,12 +40,12 @@ public class MemberController {
     @Resource(name = "beanValidator")
     protected DefaultBeanValidator beanValidator;
     
-    @RequestMapping(value = "add.do", method = RequestMethod.GET)
+    @RequestMapping(value = "add", method = RequestMethod.GET)
     public String form() {
         return "member/form";
     }
 
-    @RequestMapping(value = "add.do", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     public String add(Member member, MultipartFile file, BindingResult bindingResult) throws Exception {
         System.out.println("add.do에 들어옴!");
         // 업로드 파일을 저장할 폴더 위치를 가져온다.
@@ -64,7 +64,7 @@ public class MemberController {
         return "redirect:list.do";
     }
 
-    @RequestMapping("list.do")
+    @RequestMapping("list")
     public String list(@RequestParam(value = "pn", defaultValue = "1") int pageNo,
             @RequestParam(value = "ps", defaultValue = "10") int pageSize,
             @RequestParam(value = "select", required = false) String select,
@@ -112,7 +112,7 @@ public class MemberController {
         return "member/view";
     }
 
-    @RequestMapping("update.do")
+    @RequestMapping("update")
     public String update(HttpServletRequest request, Member member, MultipartFile file, BindingResult bindingResult) throws Exception {
         if (bindingResult.hasErrors()) {
             System.out.println("파라미터 값을 변환하는 중에 오류 발생!");
@@ -129,7 +129,7 @@ public class MemberController {
             member.setPhoto(filename);
         }
         memberService.update(member);
-        return "redirect:" +  (String)request.getHeader("Referer");
+        return "redirect:list.do";
     }
 
    /* @RequestMapping("delete")
@@ -138,7 +138,7 @@ public class MemberController {
         memberService.delete(no);
         return "redirect:list";
     }*/
-    @RequestMapping("deleteAll.do")
+    @RequestMapping("deleteAll")
     public String deleteAll(HttpServletRequest request, String no) throws Exception {
         
         String[] splitNo = no.split(",");

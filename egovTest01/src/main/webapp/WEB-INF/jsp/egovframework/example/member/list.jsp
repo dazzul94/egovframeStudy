@@ -198,7 +198,7 @@ function modify(){
         return;
     }	
 var checkNo = $("input:checkbox:checked").val(); 
-window.location = checkNo;
+window.location = checkNo + ".do";
 }
 function remove(){
 	if($("input:checkbox:checked").length < 1) {
