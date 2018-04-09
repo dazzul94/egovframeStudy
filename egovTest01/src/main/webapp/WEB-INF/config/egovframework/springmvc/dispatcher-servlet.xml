@@ -61,4 +61,12 @@
 	<!-- /For Pagination Tag -->
 
     <mvc:view-controller path="/cmmn/validator.do" view-name="cmmn/validator"/>
+    
+    <!-- <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/auth/**"/>
+            <bean class="egovframework.example.cmmn.web.AuthInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors> -->     
 </beans>
