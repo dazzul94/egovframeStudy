@@ -28,12 +28,12 @@
 <c:choose>
     <c:when test="${sessionScope.loginUser != null}">
         관리자  &nbsp;
-        <a href="${contextPath}/app/auth/logout" 
+        <a href="${contextPath}/auth/logout.do" 
            class='btn btn-outline-danger btn-sm' style="cursor:hand;"">로그아웃</a>
     </c:when>
 
     <c:otherwise>
-       <a href="${contextPath}/app/auth/login" 
+       <a href="${contextPath}/auth/login.do" 
            class='btn btn-primary btn-sm'>로그인</a>
     </c:otherwise>
 </c:choose>
