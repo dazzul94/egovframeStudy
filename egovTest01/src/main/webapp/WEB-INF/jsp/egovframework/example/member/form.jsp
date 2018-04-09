@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
 <html>
 <head>
-<link rel='stylesheet' href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='${contextPath}/node_modules/bootstrap/dist/css/bootstrap.min.css'>
 <style type="text/css">
 .file_input_textbox {float:left; /* height:29px; */width: 180px;}
     .file_input_div {position:relative; width:80px; /* height:36px; */ overflow:hidden;}
@@ -52,14 +52,14 @@ padding: 50px;
  
 }
 </style>
-<link href="${contextPath}/css/style.css" rel="stylesheet" type="text/css">
+<link href="${contextPath}/css/newTest/style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body topmargin="0" leftmargin="0">
 <div class='container'>
 <jsp:include page="../header.jsp"/>
 <p id="status"></p>
-<form action="add" method='post' enctype="multipart/form-data">
+<form action="add.do" method='post' enctype="multipart/form-data">
 <div id= "wrapper"> 
 <div class="left"> 
 <jsp:include page="../left.jsp"></jsp:include>
@@ -73,7 +73,7 @@ padding: 50px;
     <td width="640">&nbsp;</td>
   </tr>
   <tr> 
-    <td height="25"><img src="${contextPath}/image/icon.gif" width="9" height="9" align="absmiddle"> 
+    <td height="25"><img src="${contextPath}/images/newTest/icon.gif" width="9" height="9" align="absmiddle"> 
       <strong>사원 기본 정보 등록</strong></td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ padding: 50px;
               <tr> 
                 <td><table width="640" border="0" cellspacing="1" cellpadding="0">
                     <tr> 
-                      <td height="2" background="${contextPath}/image/bar_bg1.gif"></td>
+                      <td height="2" background="${contextPath}/images/newTest/bar_bg1.gif"></td>
                     </tr>
                     <tr align="center" bgcolor="F8F8F8"> 
                       <td height="26" align="center" bgcolor="#E4EBF1" style="padding-right:10"><table width="600" border="0" cellspacing="0" cellpadding="0">
@@ -95,7 +95,7 @@ padding: 50px;
                         </table></td>
                     </tr>
                     <tr align="center" bgcolor="F8F8F8"> 
-                      <td height="3" align="right" background="${contextPath}/image/bar_bg1.gif"></td>
+                      <td height="3" align="right" background="${contextPath}/images/newTest/bar_bg1.gif"></td>
                     </tr>
                   </table></td>
               </tr>
@@ -168,7 +168,7 @@ padding: 50px;
                             <div>
                             <input type="text" id="fileName" name="preShortFilename" class="file_input_textbox" readonly >
                             <div class="file_input_div">
-                            <img src="${contextPath}/image/bt_search.gif" class="file_input_img_btn" alt="open" />
+                            <img src="${contextPath}/images/newTest/bt_search.gif" class="file_input_img_btn" alt="open" />
                             <input type="file" name="file" class="file_input_hidden" size="40" id="prevv"/>
                             </div>
                             </div>

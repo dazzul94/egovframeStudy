@@ -40,13 +40,14 @@ public class MemberController {
     @Resource(name = "beanValidator")
     protected DefaultBeanValidator beanValidator;
     
-    @RequestMapping(value = "add", method = RequestMethod.GET)
+    @RequestMapping(value = "add.do", method = RequestMethod.GET)
     public String form() {
         return "member/form";
     }
 
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add.do", method = RequestMethod.POST)
     public String add(Member member, MultipartFile file, BindingResult bindingResult) throws Exception {
+        System.out.println("add.do에 들어옴!");
         // 업로드 파일을 저장할 폴더 위치를 가져온다.
         if (bindingResult.hasErrors()) {
             // 파라미터 값을 변수의 타입으로 변환하는데 오류가 있을 때,
@@ -57,13 +58,13 @@ public class MemberController {
 
         String filename = writeUploadFile(file, uploadDir);
         member.setPhoto(filename);
-
+        System.out.println("멤버에 담음!");
         memberService.add(member);
-
-        return "redirect:list";
+        System.out.println("등록완료!");
+        return "redirect:list.do";
     }
 
-    @RequestMapping("list")
+    @RequestMapping("list.do")
     public String list(@RequestParam(value = "pn", defaultValue = "1") int pageNo,
             @RequestParam(value = "ps", defaultValue = "10") int pageSize,
             @RequestParam(value = "select", required = false) String select,
@@ -111,7 +112,7 @@ public class MemberController {
         return "member/view";
     }
 
-    @RequestMapping("update")
+    @RequestMapping("update.do")
     public String update(HttpServletRequest request, Member member, MultipartFile file, BindingResult bindingResult) throws Exception {
         if (bindingResult.hasErrors()) {
             System.out.println("파라미터 값을 변환하는 중에 오류 발생!");
@@ -137,7 +138,7 @@ public class MemberController {
         memberService.delete(no);
         return "redirect:list";
     }*/
-    @RequestMapping("deleteAll")
+    @RequestMapping("deleteAll.do")
     public String deleteAll(HttpServletRequest request, String no) throws Exception {
         
         String[] splitNo = no.split(",");

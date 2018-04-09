@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">  
 <html> 
 <head>
-<link rel='stylesheet' href='../../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='${contextPath}/node_modules/bootstrap/dist/css/bootstrap.min.css'>
 <style type="text/css">
 /* .left {
     position: absolute;
@@ -48,7 +48,7 @@ padding: 50px;
  }
 
 </style>
-<link href="${contextPath}/css/style.css" rel="stylesheet" type="text/css">
+<link href="${contextPath}/css/newTest/style.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0">
 <div class='container'>
@@ -63,7 +63,7 @@ padding: 50px;
     <td>&nbsp;</td>
   </tr>
   <tr> 
-    <td height="25"><img src="${contextPath}/image/icon.gif" width="9" height="9" align="absmiddle"> 
+    <td height="25"><img src="${contextPath}/images/newTest/icon.gif" width="9" height="9" align="absmiddle"> 
       <strong>사원조회</strong></td>
   </tr>
   <tr> 
@@ -74,21 +74,21 @@ padding: 50px;
               <option selected value="kName">이름</option>
               <option value="gender">성별</option>
               <option value="stat">기술등급</option>
-            </select> <input name="words" type="text" class="INPUT"> <button type="submit" style="background-color: white; border:0px"><img src="${contextPath}/image/search.gif" width="49" height="18" border="0" align="absmiddle" style="cursor:pointer"></button>
+            </select> <input name="words" type="text" class="INPUT"> <button type="submit" style="background-color: white; border:0px"><img src="${contextPath}/images/newTest/search.gif" width="49" height="18" border="0" align="absmiddle" style="cursor:pointer"></button>
             </td>
        </form>
         </tr>
         <tr> 
           <td><table width="640" border="0" cellspacing="0" cellpadding="0">
               <tr> 
-                <td height="3" background="${contextPath}/image/bar_bg1.gif"></td>
+                <td height="3" background="${contextPath}/images/newTest/bar_bg1.gif"></td>
               </tr>
               <tr align="center" bgcolor="F8F8F8"> 
-                <td height="26" align="right" bgcolor="F8F8F8" style="padding-right:10"><img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="javascript:modify()">수정</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <span style="cursor:pointer" onMouseover="this.style.color='red';" onMouseout="this.style.color='black';"  onclick="really()">삭제</span> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="#">인사기록카드</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="#">경력정보</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                <td height="26" align="right" bgcolor="F8F8F8" style="padding-right:10"><img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="javascript:modify()">수정</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <span style="cursor:pointer" onMouseover="this.style.color='red';" onMouseout="this.style.color='black';"  onclick="really()">삭제</span> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="#">인사기록카드</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="#">경력정보</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
                   <a href="#">근무정보</a> </td>
               </tr>
               <tr align="center" bgcolor="F8F8F8"> 
@@ -119,7 +119,7 @@ padding: 50px;
                       <td width="94" align="center">${member.welcome}</td>
                     </tr>
                     <tr> 
-                      <td colspan="7" background="${contextPath}/image/line_bg.gif"></td>
+                      <td colspan="7" background="${contextPath}/images/newTest/line_bg.gif"></td>
                     </tr>
                     </c:forEach> 
                       <td height="35" colspan="7" align="center" style="padding-bottom:3">
@@ -128,17 +128,17 @@ padding: 50px;
                         <c:set var="nextPageDisabled" value="${(pageNo < lastPageNo) ? '':'disabled'}"/>
                         <c:set var="nextPageTabIndex" value="${(pageNo < lastPageNo) ? 0 : -1}"/>
 						  <ul class="pagination justify-content-center">
-                      <li class="page-item"><a href="list?pn=1&select=${select}&words=${words}"><img src="${contextPath}/image/prev.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+                      <li class="page-item"><a href="list?pn=1&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/prev.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						    <li class="page-item ${prevPageDisabled}"><a id="prevBtn"
 						        href="list?pn=${pageNo - 1}&select=${select}&words=${words}"
-						        tabindex="${prevPageTabIndex}"><img src="${contextPath}/image/pre.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+						        tabindex="${prevPageTabIndex}"><img src="${contextPath}/images/newTest/pre.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						        
 						    <li><a href="#">${pageNo}</a>&nbsp;</li>
 						    
 						    <li class="page-item ${nextPageDisabled}"><a id="nextBtn"
 						        href="list?pn=${pageNo + 1}&select=${select}&words=${words}"
-						        tabindex="${nextPageTabIndex}"><img src="${contextPath}/image/next.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
-                      <li class="page-item"><a href="list?pn=${lastPageNo}&select=${select}&words=${words}"><img src="${contextPath}/image/next_.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+						        tabindex="${nextPageTabIndex}"><img src="${contextPath}/images/newTest/next.gif" width="42" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
+                      <li class="page-item"><a href="list?pn=${lastPageNo}&select=${select}&words=${words}"><img src="${contextPath}/images/newTest/next_.gif" width="22" height="15" border="0" align="absmiddle"></a>&nbsp;</li>
 						  </ul>
                         </td>
                     </tr>
@@ -150,17 +150,17 @@ padding: 50px;
                 <td height="1" align="right" bgcolor="B1B1B1"></td>
               </tr>
               <tr align="center" bgcolor="F8F8F8"> 
-                <td height="26" align="right" bgcolor="F8F8F8" style="padding-right:10"><img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="javascript:modify()">수정</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <span style="cursor:pointer" onMouseover="this.style.color='red';" onMouseout="this.style.color='black';" onclick="really()">삭제</span><img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="#">인사기록카드</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
-                  <a href="#">경력정보</a> <img src="${contextPath}/image/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                <td height="26" align="right" bgcolor="F8F8F8" style="padding-right:10"><img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="javascript:modify()">수정</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <span style="cursor:pointer" onMouseover="this.style.color='red';" onMouseout="this.style.color='black';" onclick="really()">삭제</span><img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="#">인사기록카드</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
+                  <a href="#">경력정보</a> <img src="${contextPath}/images/newTest/all_icon.gif" width="11" height="11" align="absmiddle"> 
                   <a href="#">근무정보</a> </td>
               </tr>
             </table></td>
         </tr>
         <tr> 
-          <td height="3" background="${contextPath}/image/bar_bg1.gif"></td>
+          <td height="3" background="${contextPath}/images/newTest/bar_bg1.gif"></td>
         </tr>
       </table>
     </div>

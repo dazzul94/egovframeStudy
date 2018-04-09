@@ -10,34 +10,34 @@
   <tr> 
     <td align="center" valign="top"><table width="170" height="300" border="0" cellpadding="0" cellspacing="0">
         <tr> 
-          <td height="9"><img src="${contextPath}/image/left_top.gif" width="170" height="9"></td>
+          <td height="9"><img src="${contextPath}/images/newTest/left_top.gif" width="170" height="9"></td>
         </tr>
         <tr> 
-          <td align="center" valign="top" background="${contextPath}/image/left_bg.gif">
+          <td align="center" valign="top" background="${contextPath}/images/newTest/left_bg.gif">
           <!----------------------  메뉴들 ----------------------------->
           <table width="150" border="0" cellspacing="0" cellpadding="0">
               <tr> 
-                <td width="17" height="20"><img src="${contextPath}/image/left_icon.gif" width="11" height="11" align="absmiddle"></td>
-                <td width="133"><a href="list">인사정보</a></td>
+                <td width="17" height="20"><img src="${contextPath}/images/newTest/left_icon.gif" width="11" height="11" align="absmiddle"></td>
+                <td width="133"><a href="list.do">인사정보</a></td>
               </tr>
               <tr> 
                 <td height="20">&nbsp;</td>
-                <td><a href="add">-등록</a></td>
+                <td><a href="add.do">-등록</a></td>
               </tr>
               <tr> 
-                <td height="20"><img src="${contextPath}/image/left_icon.gif" width="11" height="11" align="absmiddle"></td>
+                <td height="20"><img src="${contextPath}/images/newTest/left_icon.gif" width="11" height="11" align="absmiddle"></td>
                 <td>직원명부</td>
               </tr>
               <tr> 
-                <td height="20"><img src="${contextPath}/image/left_icon.gif" width="11" height="11" align="absmiddle"></td>
+                <td height="20"><img src="${contextPath}/images/newTest/left_icon.gif" width="11" height="11" align="absmiddle"></td>
                 <td>퇴직자현황</td>
               </tr>
               <tr> 
-                <td height="20"><img src="${contextPath}/image/left_icon.gif" width="11" height="11" align="absmiddle"></td>
+                <td height="20"><img src="${contextPath}/images/newTest/left_icon.gif" width="11" height="11" align="absmiddle"></td>
                 <td>예비인력정보</td>
               </tr>
               <tr> 
-                <td height="20"><img src="${contextPath}/image/left_icon.gif" width="11" height="11" align="absmiddle"></td>
+                <td height="20"><img src="${contextPath}/images/newTest/left_icon.gif" width="11" height="11" align="absmiddle"></td>
                 <td>거래처정보</td>
               </tr>
               <tr> 
@@ -49,7 +49,7 @@
             </td>
         </tr>
         <tr> 
-          <td height="9"><img src="${contextPath}/image/left_bottom.gif" width="170" height="9"></td>
+          <td height="9"><img src="${contextPath}/images/newTest/left_bottom.gif" width="170" height="9"></td>
         </tr>
       </table></td>
   </tr>
